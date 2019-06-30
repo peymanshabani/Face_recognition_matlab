@@ -1,0 +1,10 @@
+A=[3 -6 26;4 -8 7 ; 0 4 4;0 -3 -3];
+A=0.2*A;
+b=[1 1 1 1];
+[Q,R]=qr(A);
+b_hat=Q'*b';
+x=b_hat\R;
+disp(x);
+m=A*x';
+e=norm(b-m);
+disp(e);
